@@ -1,0 +1,44 @@
+{
+  "eventType": [
+    {
+      "nome": "Reuniao",
+      "local": "Av Brasil",
+      "descricao": "Reunião para decisões empresariais",
+      "link": "reuniao",
+      "cor": "#fff",
+      "duracao": "30min",
+      "userId": "andrew",
+      "id": 1
+    },
+    {
+      "nome": "entrevista",
+      "local": "empresa",
+      "descricao": "entrevista",
+      "link": "entrevista",
+      "cor": "#000",
+      "duracao": "40min",
+      "userId": "andrew",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Andrew",
+      "userId": "andrew" 
+      
+    },
+    {
+      "id": 2,
+      "name": "Aline",
+      "userId": "aline" 
+
+    },
+    {
+      "id": 3,
+      "name": "Julio",
+      "userId": "julio" 
+
+    }
+  ]
+}

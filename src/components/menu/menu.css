@@ -1,0 +1,11 @@
+.menuContainer{
+    width: 4%;
+    background: #0476D9;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.menuLogo{
+    width: 80%;
+    margin: 0 auto;
+}

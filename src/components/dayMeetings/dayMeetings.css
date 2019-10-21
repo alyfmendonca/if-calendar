@@ -1,0 +1,8 @@
+.dayMeetingsContainer {
+    height: 100%;
+    padding: 20px;
+}
+.dayMeetingsContainer h3{
+    margin: 0;
+    color: #4f489f;
+}

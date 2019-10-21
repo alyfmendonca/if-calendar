@@ -1,0 +1,361 @@
+.homeContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.homeRightContent{
+    width: 96%;
+}
+.homeBottomLeft{
+    width: 75%;
+    border: 1px solid #D7D9E1;
+    display: flex;
+    flex-direction: column;
+}
+.homeBottomRight{
+    width: 25%;
+}
+.homeBottomContent{
+    display: flex;
+}
+.loginMainContainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastroTextBlue, .cadastroForm{
+    display: none;
+}
+.loginMainContent{
+    display: flex;
+    width: 70%;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 #ccc;
+    overflow: hidden;
+}
+.blueContent{
+    width: 30%;
+    padding: 20px;
+    background: #0476D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formContent{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.cadastroForm, .loginForm{
+    height: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    width: 70%;
+    padding: 0 10px;
+    justify-content: center;
+}
+.cadastroTextBlue, .loginTextBlue{
+    text-align: center;
+    flex-direction: column;
+}
+.cadastroTextBlue h4, .loginTextBlue h4{
+    color: #ffff;
+    margin: 0;
+    font-size: 25px;
+    font-family: Roboto;
+    text-align: center;
+}
+.cadastroTextBlue p, .loginTextBlue p{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+}
+.cadastroTextBlue button, .loginTextBlue button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cadastroForm, .loginForm{
+    padding: 0 10px;
+    /* display: flex; */
+    justify-content: center;
+}
+.cadastroForm button, .loginForm button {
+    border: 1px solid #0476D9;
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #0476D9;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.formContent input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
+}
+.formContent label{
+    font-size: 15px;
+    color: orange;
+    margin-bottom: 5px;
+}
+.googleLoginCadastro{
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.loginForm{
+    display: flex;
+}
+.indexContainer{
+    height: 100%;
+}
+.indexFirstContent{
+    height: 100%;
+    display: flex;
+}
+.indexFirstContent .dirContent{
+    width: 60%;
+    background: url('../assets//bg-home.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: left;
+} 
+.indexFirstContent .leftContent {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.indexFirstContent .leftContent img{
+    width: 100%;
+}
+.indexHeader{
+    position: absolute;
+    width: 90%;
+    background: transparent;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 5%;
+    align-items: center;
+}
+.indexLogo{
+    color: orange;
+    font-weight: bold;
+    font-size: 35px;
+}
+.indexMenu a {
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+}
+.dirContent h3{
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: Rubik;
+}
+.dirContent p{
+    color: #fff;
+    font-weight: 100;
+    font-size: 24px;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: Rubik;
+}
+.clean-button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 200px;
+    margin: 0 auto;
+    font-weight: bold;
+    cursor: pointer;  
+    transition: ease-in-out 0.2s all;  
+}
+.clean-button:hover{
+    background: #fff;
+    color: #0476D9;
+}
+.dirContent .conteudo{
+    width: 60%;
+    margin: auto;
+    text-align: right;
+    margin-right: 100px;
+}
+.dirContent p span {
+    position: relative;
+}
+.dirContent p span:after {
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background: orange;
+    left: 0;
+}
+.loginMainContainer:after{
+    background: url("../assets/bg-right-login.png");
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 603px;
+    width: 382px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.loginMainContainer:before{
+    background: url("../assets/bg-left-login.png");
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60%;
+    width: 63%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+.indexSecondContent{
+    height: 100%;
+    margin: 50px 100px;
+}
+.indexComoFuncionaStep{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+.indexSecondContent h3{
+    font-family: Rubik;
+    color: #F27E63;
+    font-weight: 700;
+    font-size: 36px;
+}
+.indexStepNumber{
+    color: #0442BF !important;
+    font-family: Rubik !important;
+    font-weight: 700 !important;
+    font-size: 140px !important;
+    text-align: center !important;
+    width: inherit !important;
+    margin: 0;
+}
+.indexComoFuncionaStep p{
+    font-family: Rubik;
+    font-size: 36px;
+    color: #0476D9;
+    font-weight: 500;
+    margin: 0;
+    width: fit-content;
+    position: relative;
+}
+.indexComoFuncionaStep p:after{
+    content: "";
+    width: 110%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(242, 126, 99, 0.3);
+    z-index: -1;
+}
+.indexStepNumber::after{
+    content: none !important;
+}
+.fc-unthemed{
+    z-index: -1;
+}
+.addEventTitle{
+    font-family: Rubik;
+    font-weight: 500;
+    color: #0476D9;
+    margin-bottom: 45px;
+}
+.fecharModal{
+    font-family: fontawesome;
+    cursor: pointer;
+    font-style: normal;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 24px;
+    color: #D95284;
+}
+.homeEventosHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.homeEventosHeader h3{
+    margin: 0;
+    color: #4f489f;
+}
+.homeAddEventType{
+    border: 1px solid #4f489f;
+    background: transparent;
+    color: #4f489f;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.agendarMainBox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agendaMainContent{
+    height: 80%;
+    width: 65%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #ccc;
+    display: flex;
+}
+.agendaLeft{
+    width: 25%;
+    height: 100%;
+    padding: 30px;
+}
+.agendaRight{
+    width: 75%;
+    height: 100%;
+    padding: 30px;
+}
