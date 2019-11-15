@@ -76,14 +76,9 @@ class Home extends React.Component {
       <div id="main" className="homeContainer">
           <Menu></Menu>
           <div className="homeRightContent">
-            <TopBar></TopBar>
+            {/* <TopBar></TopBar> */}
             <div className="homeBottomContent">
               <div className="homeBottomLeft">
-                <div className="homeEventosHeader">
-                  <h3>Tipos de eventos</h3>
-                  <button className="homeAddEventType" onClick={this.openModal}>Novo tipo de evento</button>
-                </div>
-                <Eventos eventTypes={this.state.eventTypes}></Eventos>
                 <Modal
                   isOpen={this.state.modalIsOpen}
                   onAfterOpen={this.afterOpenModal}
@@ -99,7 +94,11 @@ class Home extends React.Component {
                 <Calendar></Calendar>
               </div>
               <div className="homeBottomRight">
-                <DayMeetings></DayMeetings>
+                <div className="homeEventosHeader">
+                  <h3>Tipos de eventos</h3>
+                  <button className="homeAddEventType" onClick={this.openModal}>Novo</button>
+                </div>
+                <Eventos eventTypes={this.state.eventTypes}></Eventos>
               </div>
               
             </div>

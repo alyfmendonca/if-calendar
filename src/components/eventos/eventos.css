@@ -22,7 +22,7 @@
     box-shadow: 0 0 5px 0 #ccc;
     position: relative;
     overflow: hidden;
-    margin-left: 25px;
+    margin-bottom: 25px;
 }
 .singleTypeEvents .top{
     /* background: #F27E63; */
@@ -64,4 +64,11 @@
     left: 0;
     position: absolute;
     background: #f27e63;
+}
+.linkEvent{
+    position: absolute;
+    height: 0;
+    top: 0;
+    border: 0;
+    padding: 0;
 }

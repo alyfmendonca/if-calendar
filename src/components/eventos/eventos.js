@@ -23,6 +23,7 @@ export default class Eventos extends React.Component {
         // this.setState({refreshing: false})
     })
   }
+
   exibeEventos(){
     if(this.props && this.props.eventTypes && this.props.eventTypes.length > 0){
       const {eventTypes} = this.props;
@@ -33,13 +34,20 @@ export default class Eventos extends React.Component {
               <p>{event.duracao}</p>
             </div>
             <div className="bottom">
+              <input className="linkEvent" id={event.link} value={"http://localhost:3001/" + event.userId + "/" + event.link} />
               <p>/{event.link}</p>
-              <a href="#">Copiar Link</a>
+              <a onClick={() => this.copiaLink(event.link)}>Copiar Link</a>
             </div>
           </div>
       ))
     }
   }
+  copiaLink(nome){
+    var copyTextarea = document.querySelector(`#${nome}`);
+    copyTextarea.select();
+    document.execCommand('copy');
+  }
+
   render() {
     return (
       <div className="events">

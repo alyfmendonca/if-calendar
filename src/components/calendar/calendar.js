@@ -16,6 +16,13 @@ export default class Calendar extends React.Component {
       defaultView="dayGridWeek"
       plugins={[ dayGridPlugin, interactionPlugin ]}
       weekends={false}
+      weekNumbers={true}
+      weekNumbersWithinDays={true}
+      header={{
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,dayGridWeek,dayGridDay',
+      }}
       
       dateClick={this.handleDateClick}
       events={[
