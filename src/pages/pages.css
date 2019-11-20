@@ -461,4 +461,38 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+}
+.boxConfirm i{
+    font-size: 150px;
+    color: #0476D9;
+}
+.boxConfirm h4{
+    font-size: 30px;
+    color: #F27E63;
+    margin: 20px;
+}
+.boxConfirm p{
+    width: 60%;
+    font-size: 20px;
+    color: #999;
+    margin: 0;
+}
+.boxConfirm .backHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+.backHome i{
+    color: #999;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: ease-in-out .2s all;
+
+}
+.backHome:hover i{
+    margin-right: 20px;
 }

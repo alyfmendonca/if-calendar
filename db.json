@@ -29,6 +29,36 @@
       "duracao": "fwefwef",
       "userId": "1",
       "id": 3
+    },
+    {
+      "nome": "ads",
+      "local": "asd",
+      "descricao": "asda",
+      "link": "asda",
+      "cor": "asd",
+      "duracao": "asd",
+      "userId": "1",
+      "id": 4
+    },
+    {
+      "nome": "ads",
+      "local": "asd",
+      "descricao": "asda",
+      "link": "asda",
+      "cor": "asd",
+      "duracao": "asd",
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "nome": "outroevento",
+      "local": "casa",
+      "descricao": "muito bom esse evento",
+      "link": "outro",
+      "cor": "aa",
+      "duracao": "10min",
+      "userId": "andrew",
+      "id": 6
     }
   ],
   "user": [
@@ -46,6 +76,51 @@
       "id": 3,
       "name": "Julio",
       "userId": "julio"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Reuniao",
+      "userId": "andrew",
+      "date": "",
+      "clientName": ""
+    },
+    {
+      "id": 2,
+      "name": "Reuniao",
+      "userId": "andrew",
+      "date": "",
+      "clientName": ""
+    },
+    {
+      "id": 3,
+      "name": "Reuniao",
+      "userId": "julio",
+      "date": "",
+      "clientName": ""
+    },
+    {
+      "nome": "Alyf",
+      "email": "alyfmendonca",
+      "cpf": "42964089841",
+      "data": "2019-11-25T22:30:00.000Z",
+      "userId": "andrew",
+      "clientName": "Reuniao",
+      "id": 4
+    },
+    {
+      "date": "2019-11-29T22:30:00.000Z",
+      "userId": "andrew",
+      "clientName": "Reuniao",
+      "id": 5
+    },
+    {
+      "name": "Reuniao",
+      "date": "2019-11-22T21:45:00.000Z",
+      "userId": "andrew",
+      "clientName": "aaaaa",
+      "id": 6
     }
   ]
 }

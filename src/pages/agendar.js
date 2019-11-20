@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { applyMutationToEventStore } from "@fullcalendar/core";
 import DatePicker from "react-datepicker";
+import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
  
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -15,15 +17,14 @@ import {
     adicionarInscricao
 } from '../actions/inscricao';
 
-class Agendar extends Component {
+class Agendar extends React.Component {
     
     initialState = {
-        _id : '',
         nome: '', 
-        local: '', 
-        descricao: '', 
-        link: '', 
-        cor: '',
+        email: '', 
+        data: '', 
+        cpf: '', 
+        agendar: '',
         duracao: '',
         event: ''
     }
@@ -41,8 +42,8 @@ class Agendar extends Component {
         super(props);
         this.state = this.initialState;
         const { match: { params } } = this.props;
-        console.log(params.user);
-        console.log(params.evento)
+        console.log(params.evento);
+        this.agendarEvento = this.agendarEvento.bind(this);
     }
     componentWillMount(){
         this._getEvento()
@@ -79,8 +80,23 @@ class Agendar extends Component {
         </div>
     ))
     }
-    agendarEvento(){
-        
+    agendarEvento(e){
+        e.preventDefault();
+
+        const {nome, email, cpf} = this.props;
+        const event = this.state.event;
+        const data = this.state.startDate;
+
+        if((!nome || nome === '')
+            || (!email || email === '')
+            || (!cpf || cpf === '')
+            || (!data || data === '')){
+                alert('Campos obrigatórios não preenchidos!')
+                return;
+        }
+        const userId = 'andrew'
+        adicionarInscricao(event.nome, data, event.userId, nome)
+        alert('Tipo de evento adicionado com sucesso');
     }
     isWeekday = date => {
         const day = date.getDay();
@@ -88,7 +104,7 @@ class Agendar extends Component {
     };
   render() {
     // let {id} = useParams();
-    const {nome, email, cpf, data, hora, nomeInput, emailInput, cpfInput, dataInput, horaInput} = this.props;
+    const {nome, email, cpf, nomeInput, emailInput, cpfInput} = this.props;
     const props =this.props;
     const evento = this.state.event;
     
@@ -115,7 +131,6 @@ class Agendar extends Component {
                     <input type="cpf" value={cpf} onChange={cpfInput} />
 
                     <label>Data</label>
-                    {/* <input type="date" value={data} onChange={dataInput} /> */}
                     <DatePicker
                         excludeDates={[new Date('04/25/2019')]}
                         selected={this.state.startDate}
@@ -127,6 +142,7 @@ class Agendar extends Component {
                         maxTime={new Date().setHours(19)}
                         timeFormat="HH:mm"
                         timeIntervals={15}
+                        locale="pt-BR"
                         dateFormat="d/MM/yyyy h:mm aa"
                     />
                     
@@ -139,4 +155,17 @@ class Agendar extends Component {
   }
 }
 
-export default Agendar;
+const mapStateToProps = state => ({
+    nome: state.addEvent.nome,
+    email: state.agendar.email,
+    cpf: state.agendar.cpf,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+    nomeInput,
+    emailInput,
+    cpfInput,
+    adicionarInscricao
+}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Agendar);

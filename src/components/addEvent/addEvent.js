@@ -37,7 +37,7 @@ class AddEvent extends React.Component {
         }
 
         if(!_id || _id === ''){
-            const userId = '1'
+            const userId = 'andrew'
             adicionarEvento(nome, local, descricao, link, cor, duracao, userId)
             alert('Tipo de evento adicionado com sucesso');
         }else{

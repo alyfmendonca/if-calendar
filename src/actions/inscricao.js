@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/eventType'
+const URL = 'http://localhost:3000/events'
 
 export const nomeInput = e => ({
     type: 'NOME_INPUT',
@@ -27,8 +27,8 @@ export const horaInput = e => ({
     info: e.target.value
 });
 
-export const adicionarInscricao = (nome, local, descricao, link, cor, duracao, userId) => {
-    const request = axios.post(URL, { nome, local, descricao, link, cor, duracao, userId});
+export const adicionarInscricao = (name, date, userId, clientName) => {
+    const request = axios.post(URL, { name, date, userId, clientName});
     return {
         type: 'ADICIONAR_INSCRICAO',
         info: request
