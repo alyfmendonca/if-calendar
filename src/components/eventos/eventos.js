@@ -46,6 +46,7 @@ export default class Eventos extends React.Component {
     var copyTextarea = document.querySelector(`#${nome}`);
     copyTextarea.select();
     document.execCommand('copy');
+    alert('URL copiada para área de tranferência');
   }
 
   render() {

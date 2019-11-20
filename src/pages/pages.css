@@ -348,17 +348,65 @@
     border-radius: 10px;
     box-shadow: 0 0 5px 0 #ccc;
     display: flex;
+    background: #fff; 
 }
 .agendaLeft{
     width: 25%;
     height: 100%;
     padding: 30px;
+    border-right: 1px solid #ccc;
+}
+.agendaLeft h4, .agendaRight h4{
+    font-size: 20px;
+    margin: 0;
+    color: #0476D9;
 }
 .agendaRight{
     width: 75%;
     height: 100%;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
+.agendaRight form{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px; 
+}
+.agendaRight form label{
+    color: #FFA500;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.agendaRight form input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 95%;
+}
+
+.blueButton {
+    background: #0476D9;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #0476D9;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: ease-in-out .2s all;
+}
+
+.agendaRight form button:hover{
+    background: transparent;
+    color: #0476D9;
+}
+
 .fc-button-group > .fc-button{
     background: transparent;
     color: #999;
@@ -380,4 +428,37 @@
     border: 0;
     padding: 10px 0;
     color: #5d5d5d;
+}
+
+.agendarMainBox:after{
+    background: url("../assets/bg-right-login.png");
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 603px;
+    width: 382px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.agendarMainBox:before{
+    background: url("../assets/bg-left-login.png");
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60%;
+    width: 63%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+.boxConfirm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

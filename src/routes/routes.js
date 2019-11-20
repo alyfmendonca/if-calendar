@@ -7,6 +7,7 @@ import Login from '../pages/login';
 import SignUp from '../pages/signup';
 import Home from '../pages/home';
 import Agendar from '../pages/agendar';
+import Confirm from '../pages/confirm';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -28,6 +29,7 @@ const Routes = () => (
       <Route exact path="/" component={Index} />
       <Route exact path="/login" component={Login} />
       <Route path="/signup" component={SignUp} />
+      <Route path="/confirm" component={Confirm} />
       <Route path="/:user/:evento" component={Agendar} />
       <PrivateRoute path="/home" component={Home} />
       <Route path="*" component={() => <h1>Page not found</h1>} />

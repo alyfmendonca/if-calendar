@@ -19,26 +19,33 @@
       "duracao": "40min",
       "userId": "andrew",
       "id": 2
+    },
+    {
+      "nome": "alyf",
+      "local": "local",
+      "descricao": "asdef",
+      "link": "efaef",
+      "cor": "efwe",
+      "duracao": "fwefwef",
+      "userId": "1",
+      "id": 3
     }
   ],
   "user": [
     {
       "id": 1,
       "name": "Andrew",
-      "userId": "andrew" 
-      
+      "userId": "andrew"
     },
     {
       "id": 2,
       "name": "Aline",
-      "userId": "aline" 
-
+      "userId": "aline"
     },
     {
       "id": 3,
       "name": "Julio",
-      "userId": "julio" 
-
+      "userId": "julio"
     }
   ]
 }
